@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function ContactCTA() {
   return (
-    <section className="bg-blue-950 text-white py-20 px-6">
+    <section className="bg-gray-900 text-white py-20 px-6">
       <div className="max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

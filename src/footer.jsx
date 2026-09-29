@@ -19,21 +19,21 @@ const fadeUp = {
 
 function Footer() {
   return (
-    <footer className="bg-blue-950 text-slate-300">
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-14 grid md:grid-cols-3 gap-14">
+    <footer className="bg-slate-50 text-slate-900">
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-14 grid md:grid-cols-2 gap-14">
         {/* CONTACT */}
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-white font-semibold tracking-wide text-[20px] md:text-[24px] mb-6">
+          <h3 className="text-slate-300 font-semibold tracking-wide text-[20px] md:text-[24px] mb-6">
             CONTACT
           </h3>
 
           <div className="space-y-6 text-sm">
             <motion.div custom={1} variants={fadeUp} className="flex gap-4">
-              <MapPin className="text-slate-400" size={40} />
+              <MapPin className="text-slate-400" size={32} />
               <span className="md:text-[16px] leading-relaxed">
                 No. C-22 Zaria Road, Zainab House, Beind Jifatu Stores, Kano
                 State.
@@ -41,12 +41,12 @@ function Footer() {
             </motion.div>
 
             <motion.div custom={2} variants={fadeUp} className="flex gap-4">
-              <Phone className="text-slate-400" size={22} />
+              <Phone className="text-slate-400" size={32} />
               <span className="md:text-[16px]">+234 802 144 4503</span>
             </motion.div>
 
             <motion.div custom={3} variants={fadeUp} className="flex gap-4">
-              <Mail className="text-slate-400" size={22} />
+              <Mail className="text-slate-400" size={32} />
               <span className="md:text-[16px]">
                 maycermarylawfirm@gmail.com
               </span>
@@ -93,7 +93,7 @@ function Footer() {
           </div>
 
           <div className="mt-8">
-            <h4 className="text-white text-[16px] md:text-[18px] font-medium mb-2">
+            <h4 className="text-slate-300 text-[16px] md:text-[18px] font-medium mb-2">
               Office Hours
             </h4>
             <p className="text-sm md:text-[16px]">Mon – Fri: 8:00am – 5:00pm</p>
@@ -137,7 +137,7 @@ function Footer() {
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-white font-semibold tracking-wide mb-6 text-[20px] md:text-[24px]">
+          <h3 className="text-slate-300 font-semibold tracking-wide mb-6 text-[20px] md:text-[24px]">
             SERVICES
           </h3>
 
@@ -162,7 +162,7 @@ function Footer() {
       </div>
 
       {/* BOTTOM BAR */}
-      <div className="border-t border-slate-800">
+      <div className="border-t border-slate-400">
         <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm">
           <p className="text-center md:text-left">
             © {new Date().getFullYear()} Maycermary Law Firm. All rights

@@ -47,7 +47,7 @@ function Process() {
             >
               {/* Animated bottom overlay */}
               <div
-                className="absolute inset-x-0 bottom-0 h-0 bg-blue-950
+                className="absolute inset-x-0 bottom-0 h-0 bg-gray-900
                 transition-all duration-500 ease-in-out group-hover:h-full"
               />
 

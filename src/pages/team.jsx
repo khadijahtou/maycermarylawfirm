@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import amina from "../assets/amina.jpeg";
+import aminu from "../assets/aminu.jpeg";
 import maje from "../assets/maje.jpeg";
-import mama from "../assets/mama.jpeg";
 import maisamari from "../assets/maisamari.jpeg";
 
 const fadeUp = {
@@ -35,10 +35,10 @@ const teamMembers = [
   },
 
   {
-    img: mama,
+    img: aminu,
     name: "Aminu Ado Shariff Esq",
     role: "Legal Associate",
-    text: "Aminu Ado Shariff Esq is a member of the Maycermary & Associates team, contributing his professional experience and expertise to the firm's operations.",
+    text: "Aminu Ado Sharif is a distinguished Nigerian Solicitor and Advocate, called to the Nigerian Bar in 2018 and an alumnus of Bayero University, Kano. He holds an LL.M. and is currently pursuing a Ph.D. His practice combines conventional common law, Islamic jurisprudence, and cross-border commercial advisory, with experience in high-stakes litigation, corporate and commercial law, arbitration, alternative dispute resolution, estate planning, Islamic law, Islamic banking and finance, and Sharia compliance and audit. Qualified to appear before both conventional and Sharia courts, Aminu is fluent in English and Arabic. He advises corporate, institutional, and private clients on complex, multi-jurisdictional matters, providing tailored and nuanced solutions.",
   },
 
   {
@@ -66,7 +66,7 @@ function Team() {
             MEET THE TEAM
           </h3>
 
-          <div className="w-16 h-0.5 bg-blue-950 mx-auto mt-4" />
+          <div className="w-16 h-0.5 bg-gray-900 mx-auto mt-4" />
         </motion.div>
       </motion.div>
 
@@ -129,7 +129,7 @@ function Team() {
 
                 {/* ================= BACK ================= */}
                 <div
-                  className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg bg-blue-950 text-white p-7"
+                  className="absolute inset-0 rounded-2xl overflow-hidden shadow-lg bg-gray-900 text-white p-7"
                   style={{
                     backfaceVisibility: "hidden",
                     transform: "rotateY(180deg)",
