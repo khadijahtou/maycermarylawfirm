@@ -13,10 +13,8 @@ import {
 const offices = [
   {
     city: "Kano",
-    address:
-      "No. C-22 Zaria Road, Zainab House Behind Jifatu Stores, Kano State",
-    mapAddress:
-      "No. C-22 Zaria Road, Zainab House Behind Jifatu Stores, Kano State, Nigeria",
+    address: "No. C22 Zaria Road, beside Jifatu Store, Kano",
+    mapAddress: "No. C22 Zaria Road, beside Jifatu Store, Kano, Nigeria",
   },
   {
     city: "Abuja",
