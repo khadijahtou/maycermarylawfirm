@@ -35,7 +35,7 @@ function Footer() {
             <motion.div custom={1} variants={fadeUp} className="flex gap-4">
               <MapPin className="text-slate-400" size={32} />
               <span className="md:text-[16px] leading-relaxed">
-                No. C-22 Zaria Road, Zainab House, Beind Jifatu Stores, Kano
+                No. C-22 Zaria Road, Zainab House, Behind Jifatu Stores, Kano
                 State.
               </span>
             </motion.div>
