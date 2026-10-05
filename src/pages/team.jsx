@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import amina from "../assets/amina.jpeg";
+// import amina from "../assets/amina.jpeg";
 import aminu from "../assets/aminu.jpeg";
 import maje from "../assets/maje.jpeg";
 import maisamari from "../assets/maisamari.jpeg";
@@ -41,12 +41,12 @@ const teamMembers = [
     text: "Aminu Ado Sharif is a distinguished Nigerian Solicitor and Advocate, called to the Nigerian Bar in 2018 and an alumnus of Bayero University, Kano. He holds an LL.M. and is currently pursuing a Ph.D. His practice combines conventional common law, Islamic jurisprudence, and cross-border commercial advisory, with experience in high-stakes litigation, corporate and commercial law, arbitration, alternative dispute resolution, estate planning, Islamic law, Islamic banking and finance, and Sharia compliance and audit. Qualified to appear before both conventional and Sharia courts, Aminu is fluent in English and Arabic. He advises corporate, institutional, and private clients on complex, multi-jurisdictional matters, providing tailored and nuanced solutions.",
   },
 
-  {
-    img: amina,
-    name: "Team Member",
-    role: "Legal Associate",
-    text: "Additional information about this team member can be added here.",
-  },
+  // {
+  //   img: amina,
+  //   name: "Team Member",
+  //   role: "Legal Associate",
+  //   text: "Additional information about this team member can be added here.",
+  // },
 ];
 
 function Team() {

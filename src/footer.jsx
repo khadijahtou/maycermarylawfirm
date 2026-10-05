@@ -1,8 +1,7 @@
 import React from "react";
-import logo from "./assets/logo.jpeg";
 import { Mail, MapPin, Phone } from "lucide-react";
-// import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,9 +17,16 @@ const fadeUp = {
 };
 
 function Footer() {
+  const services = [
+    "General Legal Services",
+    "Constitutional Law",
+    "Arbitration and Alternative Dispute Resolution",
+    "Banking/ Commercial Law",
+  ];
+
   return (
     <footer className="bg-slate-50 text-slate-900">
-      <div className="max-w-7xl mx-auto px-6 pt-20 pb-14 grid md:grid-cols-2 gap-14">
+      <div className="max-w-7xl mx-auto px-6 pt-20 pb-14 grid md:grid-cols-3 gap-14">
         {/* CONTACT */}
         <motion.div
           initial="hidden"
@@ -32,104 +38,100 @@ function Footer() {
           </h3>
 
           <div className="space-y-6 text-sm">
-            <motion.div custom={1} variants={fadeUp} className="flex gap-4">
-              <MapPin className="text-slate-400" size={32} />
-              <span className="md:text-[16px] leading-relaxed">
+            {/* ADDRESS */}
+            <motion.a
+              custom={1}
+              variants={fadeUp}
+              href="https://www.google.com/maps/search/?api=1&query=No.+C-22+Zaria+Road,+Zainab+House,+Behind+Jifatu+Stores,+Kano+State"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-4 group"
+            >
+              <MapPin
+                className="text-slate-400 group-hover:text-slate-900 transition"
+                size={32}
+              />
+
+              <span className="md:text-[16px] leading-relaxed group-hover:text-slate-600 transition">
                 No. C-22 Zaria Road, Zainab House, Behind Jifatu Stores, Kano
                 State.
               </span>
-            </motion.div>
+            </motion.a>
 
-            <motion.div custom={2} variants={fadeUp} className="flex gap-4">
-              <Phone className="text-slate-400" size={32} />
-              <span className="md:text-[16px]">+234 802 144 4503</span>
-            </motion.div>
+            {/* PHONE */}
+            <motion.a
+              custom={2}
+              variants={fadeUp}
+              href="tel:+2348021444503"
+              className="flex gap-4 group"
+            >
+              <Phone
+                className="text-slate-400 group-hover:text-slate-900 transition"
+                size={32}
+              />
 
-            <motion.div custom={3} variants={fadeUp} className="flex gap-4">
-              <Mail className="text-slate-400" size={32} />
-              <span className="md:text-[16px]">
+              <span className="md:text-[16px] group-hover:text-slate-600 transition">
+                +234 802 144 4503
+              </span>
+            </motion.a>
+
+            {/* EMAIL */}
+            <motion.a
+              custom={3}
+              variants={fadeUp}
+              href="mailto:maycermarylawfirm@gmail.com"
+              className="flex gap-4 group"
+            >
+              <Mail
+                className="text-slate-400 group-hover:text-slate-900 transition"
+                size={32}
+              />
+
+              <span className="md:text-[16px] group-hover:text-slate-600 transition">
                 maycermarylawfirm@gmail.com
               </span>
-            </motion.div>
-
-            {/* SOCIALS */}
-            {/* <motion.div
-              custom={4}
-              variants={fadeUp}
-              className="flex gap-5 mt-6 text-slate-400"
-            >
-              <motion.a
-                href="https://www.instagram.com/ideas_and_dataglobalacademy?igshid=MW84dmk0Y3dkYXdj"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover="hover"
-              >
-                <FaInstagram className="hover:text-white transition cursor-pointer text-xl" />
-              </motion.a>
-              <motion.a
-                href="https://www.facebook.com/ideasanddata"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover="hover"
-              >
-                <FaFacebook className="hover:text-white transition cursor-pointer text-xl" />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/company/ideas-and-data-global-academy"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover="hover"
-              >
-                <FaLinkedin className="hover:text-white transition cursor-pointer text-xl" />
-              </motion.a>
-              <motion.a
-                href="https://twitter.com/IDGA_NG"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter className="hover:text-white transition cursor-pointer text-xl" />
-              </motion.a>
-            </motion.div> */}
+            </motion.a>
           </div>
 
+          {/* OFFICE HOURS */}
           <div className="mt-8">
             <h4 className="text-slate-300 text-[16px] md:text-[18px] font-medium mb-2">
               Office Hours
             </h4>
+
             <p className="text-sm md:text-[16px]">Mon – Fri: 8:00am – 5:00pm</p>
           </div>
         </motion.div>
 
-        {/* COMPANY
+        {/* QUICK LINKS */}
         <motion.div
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
         >
-          <h3 className="text-white font-semibold tracking-wide mb-6 text-[20px] md:text-[24px]">
-            COMPANY
+          <h3 className="text-slate-300 font-semibold tracking-wide mb-6 text-[20px] md:text-[24px]">
+            QUICK LINKS
           </h3>
 
           <ul className="space-y-4 text-sm md:text-[16px]">
             {[
-              "About Us",
-              "Policy",
-              "Terms & Conditions",
-              "Career",
-              "Blog",
-              "Contact Us",
+              { name: "Home", path: "/" },
+              { name: "About Us", path: "/about" },
+              { name: "Services", path: "/services" },
+              { name: "Our Team", path: "/team" },
+              { name: "Contact Us", path: "/contact" },
             ].map((item, i) => (
-              <motion.li
-                key={item}
-                custom={i}
-                variants={fadeUp}
-                className="hover:text-white transition cursor-pointer"
-              >
-                {item}
+              <motion.li key={item.name} custom={i} variants={fadeUp}>
+                <Link
+                  to={item.path}
+                  className="hover:text-slate-500 transition"
+                >
+                  {item.name}
+                </Link>
               </motion.li>
             ))}
           </ul>
-        </motion.div> */}
+        </motion.div>
 
         {/* SERVICES */}
         <motion.div
@@ -142,22 +144,25 @@ function Footer() {
           </h3>
 
           <ul className="space-y-4 text-sm md:text-[16px]">
-            {[
-              "General Legal Services",
-              "Constitutional Law",
-              "Arbitration and Alternative Dispute Resolution",
-              "Banking/ Commercial Law",
-            ].map((item, i) => (
-              <motion.li
-                key={item}
-                custom={i}
-                variants={fadeUp}
-                className="hover:text-white transition cursor-pointer"
-              >
-                {item}
+            {services.map((item, i) => (
+              <motion.li key={item} custom={i} variants={fadeUp}>
+                <Link
+                  to="/services"
+                  className="hover:text-slate-500 transition"
+                >
+                  {item}
+                </Link>
               </motion.li>
             ))}
           </ul>
+
+          {/* APPOINTMENT */}
+          <Link
+            to="/contact"
+            className="inline-block mt-8 border border-slate-400 px-5 py-3 text-sm font-medium hover:bg-slate-900 hover:text-white transition"
+          >
+            Request an Appointment
+          </Link>
         </motion.div>
       </div>
 
@@ -170,17 +175,20 @@ function Footer() {
           </p>
 
           <div className="flex gap-6 mt-3 md:mt-0">
-            <span className="hover:text-white cursor-pointer transition">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-slate-500 transition"
+            >
               Privacy Policy
-            </span>
-            <span className="hover:text-white cursor-pointer transition">
+            </Link>
+
+            <Link to="/terms" className="hover:text-slate-500 transition">
               Terms of Service
-            </span>
+            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
-
 export default Footer;
